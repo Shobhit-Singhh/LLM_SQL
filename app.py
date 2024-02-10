@@ -122,3 +122,28 @@ if __name__ == "__main__":
     st.set_page_config(layout="wide")
     genai.configure(api_key="GOOGLE_API_KEY")
     app()
+    st.markdown(
+        """
+        <style>
+            .footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #f1f1f1;
+                padding: 2px;
+                text-align: center;
+                font-size: 14px;
+                color: #555;
+            }
+            .linkedin {
+                color: #0077b5;
+            }
+        </style>
+        <div class="footer">
+            Data Science App Tutorial by Shobhit Singh, 
+            <a class="linkedin" href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
