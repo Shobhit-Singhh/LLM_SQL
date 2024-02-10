@@ -7,3 +7,4 @@ seaborn == 0.13.1
 google-generativeai == 0.3.2
 google == 3.0.0
 generativeai == 0.0.1
+genai == 2.1.0
