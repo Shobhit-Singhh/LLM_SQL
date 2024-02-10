@@ -1,8 +1,7 @@
 import streamlit as st
 import os
 import google.generativeai as genai
-from dotenv import load_dotenv
-load_dotenv()
+
 
 
 connect_prompt="""Your task is to write a LinkedIn Connect massage 
@@ -296,7 +295,7 @@ def app():
                         st.markdown("---")
                         connect_response = get_gemini_response(connect_prompt, creativity, receiver_name, post, experience, custom_connect)
                         st.write(connect_response)
-    
+
     with massage:
         col3,col4=st.columns(2)
         with col3:
@@ -328,7 +327,6 @@ def app():
                             st.write(subject_responce)
                             model = genai.GenerativeModel(model_name="gemini-pro")
 
-        
 if __name__ == "__main__":
     st.set_page_config(layout="wide")
     api_key = st.sidebar.text_input("Gemini API Key",type='password',help = "Get API Key https://makersuite.google.com/app/apikey")
